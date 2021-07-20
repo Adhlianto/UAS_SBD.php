@@ -8,7 +8,7 @@
 </head> 
 
 <body>
-	<a href="index.php">KEMBALI KE MENU</a>
+	<a href="pelajaran.php">KEMBALI KE MENU</a>
 	<br/><br/>
  
 	<form action="add_pelajaran.php" method="post" name="form1">
@@ -39,7 +39,7 @@
 		$pelajaran = $_POST['pelajaran'];
 		$semester = $_POST['semester'];
 		
-		include("config.php");
+		include("koneksi.php");
 				
 		$result = mysqli_query($conn, "INSERT INTO pelajaran(id_pelajaran,pelajaran,semester) 
         VALUES('$id_pelajaran','$pelajaran','$semester')");
