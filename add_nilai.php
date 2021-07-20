@@ -9,7 +9,7 @@
 </head> 
 
 <body>
-	<a href="index.php">KEMBALI KE MENU</a>
+	<a href="nilai.php">KEMBALI KE MENU</a>
 	<br/><br/>
  
 	<form action="add_nilai.php" method="post" name="form1">
@@ -36,7 +36,6 @@
 			</tr>
 		</table>
 	</form>
-	
 	<?php
  
 	if(isset($_POST['Submit'])) {
@@ -45,7 +44,7 @@
 		$id_pelajaran = $_POST['id_pelajaran'];
 		$nilai_akhir = $_POST['nilai_akhir'];
 		
-		include("config.php");
+		include("koneksi.php");
 				
 		$result = mysqli_query($conn, "INSERT INTO nilai(id_na,id_mhs,id_pelajaran,nilai_akhir) 
         VALUES('$id_na','$id_mhs','$id_pelajaran','$nilai_akhir')");
