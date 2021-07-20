@@ -9,7 +9,7 @@
 </head> 
 
 <body>
-	<a href="index.php">KEMBALI KE MENU</a>
+	<a href="mahasiswa.php">KEMBALI KE MENU</a>
 	<br/><br/>
  
 	<form action="add_mahasiswa.php" method="post" name="form1">
@@ -46,7 +46,7 @@
 		$kelas = $_POST['kelas'];
         $jurusan = $_POST['jurusan'];
 		
-		include("config.php");
+		include("koneksi.php");
 		
 		$result = mysqli_query($conn, "INSERT INTO mahasiswa(id_mhs,nama,kelas,jurusan) 
 		VALUES('$id_mhs','$nama','$kelas','$jurusan')");
