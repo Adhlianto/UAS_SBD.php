@@ -1,6 +1,6 @@
 <?php
 
-include("config.php");
+include("koneksi.php");
 
 if(isset($_POST['update']))
 {	
@@ -16,7 +16,7 @@ if(isset($_POST['update']))
 	"UPDATE nilai SET id_na='$id_na',id_mhs='$id_mhs',id_pelajaran='$id_pelajaran',nilai_akhir='$nilai_akhir' 
 	WHERE id_na=$id");
 
-    header("Location: index.php");
+    header("Location: nilai.php");
 }
 ?>
 
@@ -45,7 +45,7 @@ while($user_data = mysqli_fetch_array($result))
 <?php include('header1.php');?>
  
 <body>
-	<a href="index.php">KEMBALI KE MENU</a>
+	<a href="nilai.php">KEMBALI KE MENU</a>
 	<br/><br/>
 	
 	<form name="update_user" method="post" action="edit_nilai.php">
