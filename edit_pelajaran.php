@@ -15,7 +15,7 @@ if(isset($_POST['update']))
 	"UPDATE pelajaran SET id_pelajaran='$id_pelajaran',pelajaran='$pelajaran',semester='$semester' 
 	WHERE id_pelajaran=$id");
 
-    header("Location: index.php");
+    header("Location: pelajaran.php");
 }
 ?>
 
@@ -43,7 +43,7 @@ while($user_data = mysqli_fetch_array($result))
 <?php include('header1.php');?>
  
 <body>
-	<a href="index.php">KEMBALI KE MENU</a>
+	<a href="pelajaran.php">KEMBALI KE MENU</a>
 	<br/><br/>
 	
 	<form name="update_user" method="post" action="edit_pelajaran.php">
