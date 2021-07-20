@@ -1,122 +1,36 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Nilai Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<header>
-    <h1>Table Database Nilai Mahasiswa</h1>
-    <div class="header">
-        <div class="main"></div>
-    </div>
-    <a href="logout.php">Log Out</a>
-    <body>
-    <button onClick="window.print();">Print</button>
-    </a>
-    </body>
-</header>
 <body>
-        <h2>Tabel Mahasiswa</a></h2>
-        <a href="add_mahasiswa.php">TAMBAH DATA BARU</a><br/><br/>
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>ID Mahasiswa</th>
-                    <th>Nama Mahasiswa</th>
-                    <th>Kelas</th>
-                    <th>Jurusan</th>
-                </tr>
-            </thead>
-            <?php 
-            include 'koneksi.php';
-            $sql = 'SELECT * FROM mahasiswa';
-            $query = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_array($query))
-            {
-                ?>
-                <tbody>
-                    <tr>
-                        <td><?php echo $row['id_mhs']?></td>
-                        <td><?php echo $row['nama']?></td>
-                        <td><?php echo $row['kelas']?></td>
-                        <td><?php echo $row['jurusan']?></td>
-                        <td><a href="edit_mahasiswa.php?id=<?= $row['id_mhs']; ?>"><button>UBAH</button></a> |
-                    <a href="hapus_mahasiswa.php?id=<?= $row['id_mhs']; ?>"><button>HAPUS</button></a></td>
-                    </tr>
-                </tbody>
-                <?php
-            }  
-            ?>          
-        </table>
-        
-        <h2>Tabel Pelajaran</a></h2>
-        <a href="add_pelajaran.php">TAMBAH DATA BARU</a><br/><br/>
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>ID Pelajaran</th>
-                    <th>Mata Pelajaran</th>
-                    <th>Semester</th>
-                </tr>
-            </thead>
-            <?php 
-            include 'koneksi.php';
-            $sql = 'SELECT * FROM pelajaran';
-            $query = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_array($query))
-            {
-                ?>
-                <tbody>
-                    <tr>
-                    <td><?php echo $row['id_pelajaran']?></td>
-                    <td><?php echo $row['pelajaran']?></td>
-                    <td><?php echo $row['semester']?></td>
-                    <td><a href="edit_pelajaran.php?id=<?= $row['id_pelajaran']; ?>"><button>UBAH</button></a> |
-                    <a href="hapus_pelajaran.php?id=<?= $row['id_pelajaran']; ?>"><button>HAPUS</button></a></td>
-                    </tr>
-                </tbody>
-                <?php
-            }   
-            ?>            
-        </table>
-    
-        <h2>Tabel Nilai</a></h2>
-        <a href="add_nilai.php">TAMBAH DATA BARU</a><br/><br/>
-        <table border="1" cellpadding="5" cellspacing="0">
-            <thead>
-                <tr>
-                    <th>ID UAS</th>
-                    <th>ID Mahasiswa</th>
-                    <th>ID Pelajaran</th>
-                    <th>Nilai</th>
-                </tr>
-            </thead>
-            <?php 
-            include 'koneksi.php';
-            $sql = 'SELECT * FROM nilai';
-            $query = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_array($query))
-            {
-                ?>
-                <tbody>
-                    <tr>
-                        <td><?php echo $row['id_na']?></td>
-                        <td><?php echo $row['id_mhs']?></td>
-                        <td><?php echo $row['id_pelajaran']?></td>
-                        <td><?php echo $row['nilai_akhir']?></td>
-                        <td><a href="edit_nilai.php?id=<?= $row['id_na']; ?>"><button>UBAH</button></a> |
-                    <a href="hapus_nilai.php?id=<?= $row['id_na']; ?>"><button>HAPUS</button></a></td>
-                    </tr>
-                </tbody>
-                <?php
-            }
-                ?>        
+<header>
+        <h1>Sistem Nilai Mahasiswa</h1>
+        <h2>Universitas Pelita Bangsa</h2>
+</header>
+<div class="header">
+    <div class="header-logo">Teknik Informatika</div>
+</div>
+<nav>
+    <a href="index.php">Home</a>
+    <a href="mahasiswa.php">Mahasiswa</a>
+    <a href="pelajaran.php">Pelajaran</a>
+    <a href="nilai.php">Nilai</a>
+    <a href="logout.php">Log Out</a>
+</nav>
+<body>
+        <section id="hero">
+            <marquee widht="500" height="70"><h1>Selamat Datang Di Sistem Penilaian Fakultas Teknik Informatika</h1></marquee>
+            <a href="www.pelitabangsa.ac.id" class="btn btn-large">Learn more</a>
+            <img src="upb.jpg">
+       </section>     
         </table>
     <footer>
-        <p>&copy; 2021 - Universitas pelita bangsa Fakultas Teknik Informatika</p>
+        <p>&copy; 2021 - Universitas Pelita Bangsa</p>
     </footer>
 </body>
 
