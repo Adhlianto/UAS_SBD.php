@@ -1,8 +1,8 @@
 <?php
-    include 'index.php';
+    include 'mahasiswa.php';
     $id = $_GET['id'];
 
-    $result = mysqli_query($conn, "DELETE FROM nilai WHERE id_na= '{$id}'");
+    $result = mysqli_query($conn, "DELETE FROM mahasiswa WHERE id_mhs= '{$id}'");
 
-    header('location: index.php');
+    header('location: mahasiswa.php');
 ?>
