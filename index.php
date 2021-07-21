@@ -24,8 +24,7 @@
 </nav>
 <body>
         <section id="hero">
-            <marquee widht="500" height="70"><h1>Selamat Datang Di Sistem Penilaian Fakultas Teknik Informatika</h1></marquee>
-            <a href="www.pelitabangsa.ac.id" class="btn btn-large">Learn more</a>
+            <marquee widht="500" height="70"><h1>Selamat Datang Di Sistem Penilaian Fakultas Teknik Informatika Universitas Pelita Bangsa</h1></marquee>
             <img src="upb.jpg">
        </section>     
         </table>
