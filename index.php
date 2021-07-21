@@ -26,6 +26,8 @@
         <section id="hero">
             <marquee widht="500" height="70"><h1>Selamat Datang Di Sistem Penilaian Fakultas Teknik Informatika Universitas Pelita Bangsa</h1></marquee>
             <img src="upb.jpg">
+            <marquee widht="500" height="70"><h1>จงทำตัวให้เป็นประโยชน์และเคลื่อนไหวแม้ว่าคุณจะถูกกีดกันก็ตาม</h1></marquee>
+            
        </section>     
         </table>
     <footer>
